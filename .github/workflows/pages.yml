@@ -26,7 +26,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p site/css site/js
-          cp index.html favicon.svg og.png og.svg site/
+          cp index.html favicon.svg og.png og.svg P-icon.png site/
           cp css/styles.css site/css/
           cp js/app.js site/js/
       - uses: actions/upload-pages-artifact@v3
