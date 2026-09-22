@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect x="72" y="72" width="1056" height="486" rx="48" fill="#1c1c20"/>
+  <rect x="72" y="72" width="1056" height="486" rx="48" stroke="#fff" stroke-opacity="0.08"/>
+
+  <g transform="translate(132 198)">
+    <rect width="144" height="144" rx="36" fill="#141416" stroke="#fff" stroke-opacity="0.08"/>
+    <g
+      transform="translate(24 24) translate(48 48) scale(4) translate(-12 -12)"
+      fill="none"
+      stroke="#d4d8e0"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/>
+    </g>
+  </g>
+
+  <text
+    x="324"
+    y="268"
+    fill="#f4f4f5"
+    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif"
+    font-size="56"
+    font-weight="600"
+    letter-spacing="-0.03em"
+  >My X Chat Link Generator</text>
+  <text
+    x="324"
+    y="336"
+    fill="#a1a1aa"
+    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif"
+    font-size="32"
+  >&#12518;&#12540;&#12470;&#12540;&#21517;&#12363;&#12425; X &#12481;&#12515;&#12483;&#12488;&#65288;DM&#65289;&#12522;&#12531;&#12463;&#12434;&#29983;&#25104;</text>
+  <text
+    x="324"
+    y="402"
+    fill="#71717a"
+    font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-size="24"
+  >x.com/messages/compose?recipient_id=...</text>
+</svg>

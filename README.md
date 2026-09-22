@@ -8,6 +8,12 @@ https://x.com/messages/compose?recipient_id={数値ID}
 
 公開ページ: <https://yuki-dev26.github.io/xchat-link/>
 
+OG 画像は `og.svg`（編集用）と `og.png`（SNS 用・1200×630）。PNG の再生成:
+
+```bash
+npx --yes @resvg/resvg-js-cli og.svg og.png
+```
+
 ## ローカル確認
 
 任意の静的サーバーでルートの `index.html` を配信してください。
