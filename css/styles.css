@@ -214,6 +214,8 @@ button.secondary:hover:not(:disabled) {
 
 .copy-wrap {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
