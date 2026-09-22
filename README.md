@@ -7,23 +7,3 @@ https://x.com/messages/compose?recipient_id={数値ID}
 ```
 
 公開ページ: <https://yuki-dev26.github.io/xchat-link/>
-
-OG 画像は `og.svg`（編集用）と `og.png`（SNS 用・1200×630）。PNG の再生成:
-
-```bash
-npx --yes @resvg/resvg-js-cli og.svg og.png
-```
-
-## ローカル確認
-
-任意の静的サーバーでルートの `index.html` を配信してください。
-
-```bash
-npx --yes serve .
-```
-
-## GitHub Pages
-
-`main` への push で [Deploy GitHub Pages](.github/workflows/pages.yml) が走り、サイトファイルを公開します。
-
-初回は GitHub の **Settings → Pages → Build and deployment** で **GitHub Actions** を選んでください。
