@@ -8,8 +8,20 @@ const result = document.getElementById("result");
 const meta = document.getElementById("meta");
 const linkEl = document.getElementById("link");
 const copyBtn = document.getElementById("copy");
-
 let currentLink = "";
+let copyResetTimer = 0;
+
+function setCopyIdle() {
+  copyBtn.classList.remove("is-copied");
+  copyBtn.setAttribute("aria-label", "リンクをコピー");
+  copyBtn.title = "コピー";
+}
+
+function setCopyDone() {
+  copyBtn.classList.add("is-copied");
+  copyBtn.setAttribute("aria-label", "コピーしました");
+  copyBtn.title = "コピーしました";
+}
 
 function normalizeUsername(raw) {
   const trimmed = raw.trim();
@@ -49,6 +61,8 @@ form.addEventListener("submit", async (e) => {
   setError("");
   result.hidden = true;
   currentLink = "";
+  window.clearTimeout(copyResetTimer);
+  setCopyIdle();
 
   let username;
   try {
@@ -82,7 +96,7 @@ form.addEventListener("submit", async (e) => {
     currentLink = "https://x.com/messages/compose?recipient_id=" + id;
     setMeta(screen, name);
     linkEl.textContent = currentLink;
-    copyBtn.textContent = "コピー";
+    setCopyIdle();
     result.hidden = false;
   } catch (err) {
     setError(err.message || "取得に失敗しました");
@@ -95,8 +109,7 @@ form.addEventListener("submit", async (e) => {
 copyBtn.addEventListener("click", async () => {
   if (!currentLink) return;
   await navigator.clipboard.writeText(currentLink);
-  copyBtn.textContent = "コピーしました";
-  window.setTimeout(() => {
-    copyBtn.textContent = "コピー";
-  }, 1600);
+  window.clearTimeout(copyResetTimer);
+  setCopyDone();
+  copyResetTimer = window.setTimeout(setCopyIdle, 1600);
 });
