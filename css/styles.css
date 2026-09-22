@@ -55,39 +55,45 @@ main {
 }
 
 .credit {
+  display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 32rem;
-  padding: 0 1.25rem 1.75rem;
+  padding: 0 1.25rem 2rem;
 }
 
-.credit-link {
+.credit-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  color: var(--muted);
-  font-size: 0.8125rem;
-  text-decoration: none;
-  transition: color var(--motion-quick) var(--ease-out);
-}
-
-.credit-link:hover {
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.875rem 0.25rem 0.25rem;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-border);
   color: var(--fg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    box-shadow var(--motion-quick) var(--ease-out),
+    transform var(--motion-quick) var(--ease-out);
 }
 
-.credit-icon {
+.credit-btn:hover {
+  box-shadow: var(--shadow-border-hover);
+}
+
+.credit-btn:active {
+  transform: scale(0.98);
+}
+
+.credit-btn__icon {
   display: block;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 0.375rem;
-}
-
-.credit-text {
-  line-height: 1.4;
-}
-
-.credit-label {
-  color: var(--fg-subtle);
-  margin-right: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .kicker {
